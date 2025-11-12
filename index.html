@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jihad Al Mahid | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <h1 class="logo">Portfolio<span>.</span></h1>
+      <ul class="nav-menu">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+<!-- Hero Section -->
+<section id="home" class="hero">
+  <div class="hero-container">
+    <div class="hero-content">
+      <span class="welcome-badge">Welcome to my portfolio</span>
+      <h1 class="animated-title">Hi, I'm Jihad Al Mahid</h1>
+      <p class="animated-description">A passionate developer crafting beautiful and functional web experiences.<br>
+      Specialized in creating responsive, user-friendly applications.</p>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn-primary mini-btn">Get In Touch</a>
+        <a href="#portfolio" class="btn-secondary mini-btn">View Work</a>
+        <a href="assets/jihad al mahid cv2.pdf" target="_blank" class="btn-secondary mini-btn">Download Resume</a> <!-- Replace with your resume link -->
+      </div>
+      <div class="social-links">
+        <a href="https://github.com/mahid36" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/jihad-al-mahid" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=jihad.al.mahid@gmail.com" target="_blank" class="social-icon"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="uploads/WhatsApp Image 2025-11-11 at 18.55.50_2dbca669.jpg" alt="Jihad Al Mahid" /> <!-- Replace with your image link -->
+    </div>
+    <div class="wave-background"></div>
+  </div>
+</section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2 class="section-title">GET TO KNOW ME</h2>
+      <h3>About Me</h3>
+      <div class="about-card">
+        <p>
+          Hi, I'm Jihad Al Mahid, a passionate learner and aspiring Back-End Developer specializing in PHP and Laravel. 
+          I love building clean, functional, and user-friendly web applications that solve real-world problems. 
+          Currently, I'm enhancing my skills through hands-on projects and exploring the latest tools in web development.
+        </p>
+        <p>
+          When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, 
+          or gaining knowledge to tech projects.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="portfolio">
+    <div class="container">
+      <h2 class="section-title">MY WORK</h2>
+      <h3>Projects</h3>
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-header gradient-blue"></div>
+          <div class="project-body">
+            <h3>E-Commerce Platform</h3>
+            <p>A full-featured online shopping platform with cart, checkout, and admin dashboard.</p>
+            <div class="tech-stack">
+              <span>Php</span>
+              <span>Laravel</span>
+              <span>MySQL</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="demo-link">Demo</a>
+              <a href="#" class="code-link">Code</a>
+            </div>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-header gradient-purple"></div>
+          <div class="project-body">
+            <h3>Simple Student Registration Form</h3>
+            <p>A simple registration form connect with MySQL.</p>
+            <div class="tech-stack">
+              <span>PHP</span>
+              <span>Laravel</span>
+              <span>MySQL</span>
+              <span>Bootstrap</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="demo-link">Demo</a>
+              <a href="https://github.com/mahid36/Student-Registration-Form" class="link">Code</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2 class="section-title">LET'S CONNECT</h2>
+      <h3>Get In Touch</h3>
+      
+      <div class="contact-info">
+        <div class="info-card">
+          <i class="fas fa-envelope"></i>
+          <p>jihad.al.mahid@gmail.com</p>
+        </div>
+        <div class="info-card">
+          <i class="fas fa-phone"></i>
+          <p>+880 1307-968856</p>
+        </div>
+        <div class="info-card">
+          <i class="fas fa-map-marker-alt"></i>
+          <p>Mirpur, Dhaka, Bangladesh</p>
+        </div>
+      </div>
+
+      <div class="contact-form-container">
+        <div class="form-header">
+          <h3>Send me a message</h3>
+          <p>Have a project in mind? Let's work together to bring your ideas to life.</p>
+        </div>
+        <form id="contact-form" class="contact-form">
+          <input type="text" placeholder="Your name" required />
+          <input type="email" placeholder="your.email@example.com" required />
+          <textarea placeholder="Tell me about your project..." rows="5" required></textarea>
+          <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+        <p id="form-message" class="form-message"></p>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
