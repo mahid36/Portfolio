@@ -57,21 +57,16 @@ contactForm.addEventListener('submit', (e) => {
     method: "POST",
     body: new FormData(contactForm)
   })
-  .then((response) => {
-    if (response.ok) {
-      formMessage.textContent = "✔ Message sent successfully!";
-      formMessage.style.color = "green";
-      contactForm.reset();
+ .then(() => {
+  formMessage.textContent = "✔ Message sent successfully!";
+  formMessage.style.color = "green";
+  contactForm.reset();
 
-      setTimeout(() => {
-        window.location.href = "https://mahid36.github.io/portfolio/";
-      }, 3000);
-    } else {
-      throw new Error("Network response was not ok");
-    }
-  })
-  .catch(() => {
-    formMessage.textContent = "✖ Something went wrong. Try again.";
-    formMessage.style.color = "red";
-  });
+  setTimeout(() => {
+    window.location.href = "https://mahid36.github.io/portfolio/";
+  }, 3000);
+})
+.catch(() => {
+  formMessage.textContent = "✖ Something went wrong. Try again.";
+  formMessage.style.color = "red";
 });
