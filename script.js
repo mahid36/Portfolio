@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+
   // Navbar Active Link
   const navLinks = document.querySelectorAll('.nav-link');
   navLinks.forEach(link => {
@@ -19,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Smooth Scroll for Buttons and Nav Links
+
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       e.preventDefault();
@@ -44,28 +46,32 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Form Validation and Submission
-  const contactForm = document.getElementById('contact-form');
-  const formMessage = document.getElementById('form-message');
+  // Form Validation + FormSubmit Integration
+const contactForm = document.getElementById('contact-form');
+const formMessage = document.getElementById('form-message');
 
-  contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
+contactForm.addEventListener('submit', (e) => {
+  e.preventDefault(); 
 
-    const name = contactForm.querySelector('input[type="text"]').value;
-    const email = contactForm.querySelector('input[type="email"]').value;
-    const message = contactForm.querySelector('textarea').value;
-
-    if (name && email && message) {
-      formMessage.textContent = 'Message sent successfully! I\'ll get back to you soon.';
+  fetch(contactForm.action, {
+    method: "POST",
+    body: new FormData(contactForm)
+  })
+  .then((response) => {
+    if (response.ok) {
+      formMessage.textContent = "✔ Message sent successfully!";
+      formMessage.style.color = "green";
       contactForm.reset();
+
       setTimeout(() => {
-        formMessage.textContent = '';
-      }, 5000);
+        window.location.href = "https://mahid36.github.io/portfolio/";
+      }, 3000);
     } else {
-      formMessage.textContent = 'Please fill out all fields.';
-      setTimeout(() => {
-        formMessage.textContent = '';
-      }, 5000);
+      throw new Error("Network response was not ok");
     }
+  })
+  .catch(() => {
+    formMessage.textContent = "✖ Something went wrong. Try again.";
+    formMessage.style.color = "red";
   });
 });
